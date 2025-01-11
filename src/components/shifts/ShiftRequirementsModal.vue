@@ -50,11 +50,11 @@
                 <label for="position" class="block text-sm font-medium mb-1">Position</label>
                 <select id="position" class="w-full rounded-md border border-gray-300 p-2">
                   <option
-                    v-for="role in [...roles].sort((a, b) => a.name.localeCompare(b.name))"
-                    :key="role.id"
-                    :value="role.id"
+                    v-for="position in [...positions].sort((a, b) => a.name.localeCompare(b.name))"
+                    :key="position.id"
+                    :value="position.id"
                   >
-                    {{ role.name }}
+                    {{ position.name }}
                   </option>
                 </select>
               </div>
@@ -77,7 +77,7 @@
                   <div>
                     <div class="font-medium">{{ user.fullName }}</div>
                     <div class="text-sm text-gray-500">
-                      <p>{{ user.roleId }}</p>
+                      <p>{{ user.positionId }}</p>
                       <p>{{ user.rate }}</p>
                     </div>
                   </div>
@@ -109,7 +109,7 @@
                   <div>
                     <div class="font-medium">{{ user.fullName }}</div>
                     <div class="text-sm text-gray-500">
-                      <p>{{ user.roleId }}</p>
+                      <p>{{ user.positionId }}</p>
                       <p>{{ user.rate }}</p>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ interface Props {
   departmentId: string
   draggedData?: {
     shiftTemplate: ShiftTemplate
-    roleId: string
+    positionId: string
     dayIndex: number
   } | null
 }
@@ -185,7 +185,7 @@ const requirements = ref<ShiftRequirement[]>([])
 const scheduledEmployees = ref<User[]>(MOCK_DATA.scheduledEmployees)
 const unscheduledEmployees = ref<User[]>(MOCK_DATA.unscheduledEmployees)
 
-const { locations, departments, shiftTemplates, roles } = MOCK_DATA
+const { locations, departments, shiftTemplates, positions } = MOCK_DATA
 
 function handleAssign(employee: User) {
   scheduledEmployees.value.push(employee)
