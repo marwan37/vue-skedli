@@ -163,7 +163,7 @@ function handleSaveShift(
   scheduledEmployees: User[],
 ) {
   if (store.draggedData) {
-    const position = store.positions.find((p) => p.id === store.draggedData.positionId)
+    const position = store.positions.find((p) => p.id === store.draggedData?.positionId)
     scheduledEmployees.forEach((employee) => {
       employee.position = position || null
     })

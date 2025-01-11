@@ -30,6 +30,6 @@ export interface User {
   updatedAt?: Date;
   abilities?: AbilityRule[];
   avatar?: string;
-  role?: Role;
-  position?: Position;
+  role?: Role | null;
+  position?: Position | null;
 }
