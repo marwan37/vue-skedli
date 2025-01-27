@@ -2,6 +2,9 @@
 
 Skedli is a modern healthcare worker scheduling application designed to streamline the process of managing staff schedules across medical departments and units.
 
+> [!NOTE]  
+> 🚧 This project is currently under active development and is not yet ready for production use. Features and documentation are being actively developed and may change frequently.
+
 ## 🏥 Overview
 
 Skedli helps healthcare organizations:
